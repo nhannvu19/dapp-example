@@ -1,8 +1,9 @@
 var express = require('express');
+const path = require('path');
 var app = express();
 
 app.get('/', function (req, res) {
-   res.sendFile('/Users/nhannvu/Desktop/quoine/liquid_web/dapp.html');
+   res.sendFile(path.join(__dirname + '/dapp.html'));
 })
 
 app.use(express.static('public'));
